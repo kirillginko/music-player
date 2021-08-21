@@ -21,7 +21,7 @@ const Player = ({
   setCurrentSong,
   setSongs,
 }) => {
-  const [activeVolume, setActiveVolume] = useState(false);
+  const [activeVolume, setActiveVolume] = useState(true);
   //UseEffect Update List
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
@@ -130,21 +130,21 @@ const Player = ({
           icon={faAngleRight}
           onClick={() => skipTrackHandler("skip-forward")}
         />
-        <FontAwesomeIcon
-          onClick={() => setActiveVolume(!activeVolume)}
-          icon={faVolumeDown}
-        />
-        {activeVolume && (
-          <input
-            onChange={changeVolume}
-            value={songInfo.volume}
-            max="1"
-            min="0"
-            step="0.01"
-            type="range"
-          />
-        )}
       </div>
+      <FontAwesomeIcon
+        // onClick={() => setActiveVolume(!activeVolume)}
+        icon={faVolumeDown}
+      />
+      {activeVolume && (
+        <input
+          onChange={changeVolume}
+          value={songInfo.volume}
+          max="1"
+          min="0"
+          step="0.01"
+          type="range"
+        />
+      )}
     </div>
   );
 };

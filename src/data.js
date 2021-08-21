@@ -61,6 +61,16 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Fallin",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/07/034f52eeaeceb144cca67b0930d705d32fc39e37-1024x1024.jpg",
+      artist: "Ruck P",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=20561",
+      color: ["#CE838D", "#605077"],
+      id: uuidv4(),
+      active: false,
+    },
     //ADD MORE HERE
   ];
 }

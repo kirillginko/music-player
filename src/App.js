@@ -75,7 +75,6 @@ function App() {
         ref={audioRef}
         src={currentSong.audio}
         onEnded={songEndHandler}
-       
       ></audio>
     </div>
   );
