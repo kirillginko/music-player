@@ -1,14 +1,16 @@
 .song-container {
-  min-height: 60vh;
+  min-height: 40vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img {
-    width: 25%;
-    border-radius: 50%;
-    transition: all 2s ease;
-  }
+  overflow-x: hidden;
+  // img {
+  //   width: 25%;
+  //   border-radius: 50%;
+  //   transition: all 2s ease;
+  // }
   h2 {
     padding: 3rem 1rem 1rem 1rem;
   }
@@ -965,17 +967,6 @@
   -webkit-transform: skewX(10deg) rotateZ(-10deg);
 }
 
-#inspired {
-  font-family: "Quicksand", sans-serif;
-  color: #fff;
-  font-size: 24px;
-}
-
-#inspired a {
-  color: #464646;
-  text-decoration: none;
-}
-
 /* keyframes for wheel animation;  simple 0 to 360 */
 @keyframes spin {
   from {
@@ -1014,6 +1005,10 @@
   .song-container {
     overflow-x: hidden;
     #turntable {
+      position: relative;
+      // width: 660px;
+      // height: 400px;
+      // height: 50vh;
       z-index: 1;
 
       // width: 60%;

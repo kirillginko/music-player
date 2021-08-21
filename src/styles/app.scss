@@ -7,6 +7,8 @@
 body {
   font-family: "Lato", sans-serif;
   transition: all 0.5s ease;
+  height: 100vh;
+  overflow-y: hidden;
   // animation: pulse 20s infinite;
   // background: rgb(158, 196, 158);
 }
@@ -24,7 +26,7 @@ body {
 
 .App {
   transition: all 0.5s ease;
-  height: 100vh;
+  // height: 100vh;
 }
 .library-active {
   margin-left: 30%;
@@ -41,6 +43,12 @@ h3,
 h4 {
   color: rgb(100, 100, 100);
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  // body {
+  //   overflow-y: visible;
+  // }
 }
 
 @import "./song";
