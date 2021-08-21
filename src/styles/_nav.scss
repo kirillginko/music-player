@@ -8,15 +8,16 @@ nav {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    border: 2px solid rgb(65, 65, 65);
+    border: 2px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
+    color: white;
     &:hover {
-      background: rgb(65, 65, 65);
+      background: #383838;
       color: white;
     }
   }
   .library-active {
-    background: rgb(65, 65, 65);
+    // background: rgb(65, 65, 65);
     color: white;
   }
 }
