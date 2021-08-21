@@ -71,6 +71,36 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Dreamstate",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/05/8ef1fa972003495d1ecfba6292116174e9c5d940-1024x1024.jpg",
+      artist: "Toonorth",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=17947",
+      color: ["#263C51", "#000000"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Higher",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/05/2473c60e471fe9b40e246bf7711c87d3d6ea69a7-1024x1024.jpg",
+      artist: "Misha, Jussi Halme",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=15088",
+      color: ["#E77072", "#2D385B"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Lonely Waves",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/02/80be32197ca7971424bef5e4d0c6810e1d4334c6-1024x1024.jpg",
+      artist: "C Y G N",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=14981",
+      color: ["#070E28", "#E484F4"],
+      id: uuidv4(),
+      active: false,
+    },
     //ADD MORE HERE
   ];
 }

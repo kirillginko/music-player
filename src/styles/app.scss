@@ -6,9 +6,25 @@
 
 body {
   font-family: "Lato", sans-serif;
+  transition: all 0.5s ease;
+  // animation: pulse 20s infinite;
+  // background: rgb(158, 196, 158);
 }
+// .pulse {
+//   @keyframes pulse {
+//     0%,
+//     100% {
+//       background-color: #f56a3f;
+//     }
+//     50% {
+//       background-color: #9e42b0;
+//     }
+//   }
+// }
+
 .App {
   transition: all 0.5s ease;
+  height: 100vh;
 }
 .library-active {
   margin-left: 30%;

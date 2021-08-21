@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./styles/app.scss";
 //Import Components
 import Player from "./components/Player";
@@ -46,37 +46,47 @@ function App() {
     playAudio(isPlaying, audioRef);
     return;
   };
+
   return (
-    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song isPlaying={isPlaying} currentSong={currentSong} />
-      <Player
-        audioRef={audioRef}
-        setIsPlaying={setIsPlaying}
-        currentSong={currentSong}
-        isPlaying={isPlaying}
-        songInfo={songInfo}
-        setSongInfo={setSongInfo}
-        songs={songs}
-        setSongs={setSongs}
-        setCurrentSong={setCurrentSong}
-      />
-      <Library
-        songs={songs}
-        setCurrentSong={setCurrentSong}
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        setSongs={setSongs}
-        libraryStatus={libraryStatus}
-      />
-      <audio
-        onLoadedMetadata={timeUpdateHandler}
-        onTimeUpdate={timeUpdateHandler}
-        ref={audioRef}
-        src={currentSong.audio}
-        onEnded={songEndHandler}
-      ></audio>
-    </div>
+    <body
+      style={{
+        background: `linear-gradient(to right, ${currentSong.color[0]},${currentSong.color[1]})`,
+      }}
+    >
+      <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+        <Nav
+          libraryStatus={libraryStatus}
+          setLibraryStatus={setLibraryStatus}
+        />
+        <Song isPlaying={isPlaying} currentSong={currentSong} />
+        <Player
+          audioRef={audioRef}
+          setIsPlaying={setIsPlaying}
+          currentSong={currentSong}
+          isPlaying={isPlaying}
+          songInfo={songInfo}
+          setSongInfo={setSongInfo}
+          songs={songs}
+          setSongs={setSongs}
+          setCurrentSong={setCurrentSong}
+        />
+        <Library
+          songs={songs}
+          setCurrentSong={setCurrentSong}
+          audioRef={audioRef}
+          isPlaying={isPlaying}
+          setSongs={setSongs}
+          libraryStatus={libraryStatus}
+        />
+        <audio
+          onLoadedMetadata={timeUpdateHandler}
+          onTimeUpdate={timeUpdateHandler}
+          ref={audioRef}
+          src={currentSong.audio}
+          onEnded={songEndHandler}
+        ></audio>
+      </div>
+    </body>
   );
 }
 

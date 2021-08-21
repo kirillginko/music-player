@@ -1014,7 +1014,7 @@
   .song-container {
     overflow-x: hidden;
     #turntable {
-      z-index: -1;
+      z-index: 1;
 
       // width: 60%;
     }
